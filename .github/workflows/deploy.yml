@@ -24,7 +24,7 @@ jobs:
             cd /var/www/html/QuizCC
             sudo git pull origin master
             # Restart Nginx or any other service if needed
-            sudo systemctl restart nginx
+            sudo systemctl restart httpd
           EOF
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
